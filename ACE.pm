@@ -30,7 +30,7 @@ use MIME::Base64;
 @EXPORT = qw(
 	
 );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 
 # Preloaded methods go here.
@@ -41,7 +41,7 @@ my @Formats = ('utf8', 'utf16', 'ucs4', 'utf5', 'race', 'lace', 'name', 'u+');
 my $UTF5Chars = '0123456789ABCDEFGHIJKLMNOPQRSTUV';
 my $Base32Chars = 'abcdefghijklmnopqrstuvwxyz234567';
 my $RACEPrefix = 'bq--';
-my $LACEPrefix = 'bq--';
+my $LACEPrefix = 'lq--';
 
 my $Debug = 0;
 
@@ -552,7 +552,7 @@ sub DebugOut {
 sub DieOut {
         my $DieTemp = shift(@_);
 #        if(defined($ErrTmp)) { print STDERR $DieTemp; }
-        exit;
+        die;
 }
 
 
