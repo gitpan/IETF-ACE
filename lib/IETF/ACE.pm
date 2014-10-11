@@ -22,16 +22,32 @@ use MIME::Base64;
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
 %EXPORT_TAGS = ( 'all' => [ qw(
-	
 ) ] );
 
-@EXPORT_OK = qw ( @{ $EXPORT_TAGS{'all'} } &UCS4toName &UCS4toUPlus &UTF5toUCS4 &GetCharFromUTF5 &UCS4toRACE &RACEtoUCS4 &UCS4toLACE &LACEtoUCS4 &Base32Encode &Base32Decode &CheckForSTD13Name &CheckForBadSurrogates &HexOut &DebugOn &DebugOff &DebugOut);
+@EXPORT_OK = qw (
+   @{ $EXPORT_TAGS{'all'} }
+   &UCS4toName
+   &UCS4toUPlus
+   &UTF5toUCS4
+   &GetCharFromUTF5
+   &UCS4toRACE
+   &RACEtoUCS4
+   &UCS4toLACE
+   &LACEtoUCS4
+   &Base32Encode
+   &Base32Decode
+   &CheckForSTD13Name
+   &CheckForBadSurrogates
+   &HexOut
+   &DebugOn
+   &DebugOff
+   &DebugOut
+);
 
 @EXPORT = qw(
-	
 );
-$VERSION = '0.02';
 
+$VERSION = '0.03';
 
 # Preloaded methods go here.
 
@@ -557,8 +573,6 @@ sub DieOut {
 
 
 __END__
-# Below is stub documentation for your module. You better edit it!
-
 =head1 NAME
 
 IETF::ACE - Perl extension for IETF IDN WG ACE character conversions
@@ -624,14 +638,13 @@ EOD
 
 None by default.
 
-
 =head1 AUTHOR
 
 Paul Hoffman, Internet Mail Consortium
 phoffman@mail.imc.org
 
-James Briggs, ActiveMessage, Inc.
-james@rf.net
+James Briggs
+james.briggs@yahoo.com
 
 =head1 SEE ALSO
 

@@ -1,8 +1,10 @@
+#!/usr/bin/perl
+
 use strict;
 use diagnostics;
 
 use Unicode::String qw / utf8 /;
-use IETF::ACE qw / &UCS4toRACE /;
+use IETF::ACE qw / UCS4toRACE /;
 
    my $TheIn="ábcde"; # .com
 
