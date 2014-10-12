@@ -9,7 +9,6 @@ require Exporter;
 use AutoLoader qw(AUTOLOAD);
 
 use Unicode::String qw(utf8 ucs4 utf16);
-	# From CPAN/authors/id/GAAS/Unicode-String
 use MIME::Base64;
 
 @ISA = qw(Exporter);
@@ -47,7 +46,7 @@ use MIME::Base64;
 @EXPORT = qw(
 );
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 # Preloaded methods go here.
 
@@ -615,7 +614,7 @@ IETF::ACE - Perl extension for IETF IDN WG ACE character conversions
   name      The character names; output only
   u+        The character hex values in U+ notation; output only
 
-Sample Program
+=head1 Example
 
  use strict;
  use diagnostics;
@@ -648,6 +647,6 @@ james.briggs@yahoo.com
 
 =head1 SEE ALSO
 
-L<perl>.
+None.
 
 =cut

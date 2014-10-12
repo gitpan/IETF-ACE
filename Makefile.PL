@@ -4,9 +4,16 @@ use ExtUtils::MakeMaker;
 # the contents of the Makefile that is written.
 WriteMakefile(
     NAME              => 'IETF::ACE',
+    LICENSE           => 'perl_5',
     VERSION_FROM      => 'lib/IETF/ACE.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    PREREQ_PM         => {
+                           Unicode::String => 0,
+                           MIME::Base64 => 0,
+                         },
+    TEST_REQUIRES     => {
+                           Test::More => 0,
+                         },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/IETF/ACE.pm', # retrieve abstract from module
-       AUTHOR         => 'A. U. Thor <james@localdomain>') : ()),
+       AUTHOR         => 'James Briggs <james.briggs@yahoo.com>') : ()),
 );

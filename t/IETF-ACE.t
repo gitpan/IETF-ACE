@@ -4,22 +4,12 @@
 use strict;
 use diagnostics;
 
-#########################
-
 # change 'tests => 1' to 'tests => last_test_to_print';
 
 use Test::More tests => 3;
 
-BEGIN { use_ok('Unicode::String', qw(utf8), ) };
 BEGIN { use_ok('IETF::ACE', qw(UCS4toRACE), ) };
-
-#########################
-
-# Insert your test code below, the Test::More module is use()ed here so read
-# its man page ( perldoc Test::More ) for help writing this test script.
-
-###
-
+BEGIN { use_ok('Unicode::String', qw(utf8), ) };
 
    my $in = "ábcde"; # .com
 
